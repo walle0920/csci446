@@ -1,0 +1,20 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<h1>Give them some love!</h1>
+
+<% cache ['home', Pet.latest] do %>
+<% @pets.each do |pet| %>
+<% cache ['entry', pet] do %>
+<div class="entry">
+<h3><%= pet.title %></h3>
+<%= image_tag(pet.image_url) %>
+<p><%= sanitize(pet.description) %></p>
+<div class="age_line">
+<span class="age">age:<%= pet.age %></span>
+<%= button_to 'Adopt', line_items_path(pet_id: pet) %>
+</div>
+</div>
+<% end %>
+<% end %>
+<% end %>

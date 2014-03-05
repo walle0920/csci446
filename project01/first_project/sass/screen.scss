@@ -1,0 +1,102 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "stylesheet.css"; 
+@import "_bg"; /* (Partials)control sidebar picture */
+
+$primary-color: white;    /*  Reuse color */
+$font-stack: Courier Regular;/*  Reuse fonts */
+$bg-color : #6A6AFF;   /*  Reuse bgcolor */
+
+#td1 {
+      background-color: $bg-color;
+      color: $primary-color;
+       }
+#td2 {
+      @extend #td1;         /*Inheritance*/
+       }
+.photo{
+     width: 200px;
+    height: 230px;
+    }
+
+#char{                      /*  Nesting */
+  p1{
+    color: black;
+   font-weight: bold;
+    font-size:40px;
+    }
+  p2{
+     color: black;
+   font-weight: bold;
+     font-size:30px;
+    }
+  p3{
+     color: black;
+   font-weight: bold;
+     font-size:20px;
+    }
+  p4{
+    color: black;
+   font-weight: bold;
+    font-size:15px;
+   }
+   
+  }
+
+.button{
+        clear: none;
+        display: inline;
+        font-size: 8pt;
+        float: center;
+        color: darkorange;  
+        background-color: gray;
+        
+      }
+
+#tp{
+  vertical-align: top;  /*this is for TOP secrect table*/
+}
+
+.up
+{
+  vertical-align: middle;
+  text-align: left;
+}
+
+.sidebar{
+  vertical-align: top;
+}
+
+
+/*1 mixin,set bgcolor*/
+@function bgcolor($color) {    
+  @return rgba(0,0,0,$color)
+}
+
+.bgcolor{
+  background:bgcolor(0.10);
+}
+
+/*2 mixin set side and radius, radius is given default parameters*/
+@mixin rounded($side, $radius: 10px) {         
+  border-#{$side}-radius: $radius;
+  -moz-border-radius-#{$side}: $radius;
+  -webkit-border-#{$side}-radius: $radius;
+}
+
+#navbar li { @include rounded(top); }   /*  call mixin */
+#footer { @include rounded(top, 5px); }
+#sidebar { @include rounded(left, 8px); }
+
+
+.body {
+  top: 50px + 100px ;              /* Operators*/
+}
+
+
+
+
