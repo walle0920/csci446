@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<div id="container">
+		<div id="header"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="list.css" >
+	<script type="text/javascript">
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+function MM_jumpMenuGo(objId,targ,restore){ //v9.0
+  var selObj = null;  with (document) { 
+  if (getElementById) selObj = getElementById(objId);
+  if (selObj) eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0; }
+}
+    </script>
+	</head></div>
+	<div id="body"><body>
+	<h1>TOP 50 BOOKS IN THE WORLD !</h1>
+	<form name="form" id="form">
+		  <select name="jumpMenu" id="jumpMenu">
+		    <option value="http://localhost:8080/title">title</option>
+		    <option value="http://localhost:8080/year">year</option>
+		    <option value="http://localhost:8080/author">author</option>
+		    <option value="http://localhost:8080/id">id</option>
+		    <option value="http://localhost:8080/language">language</option>
+      </select>
+		  <input type="button" name="go_button" id= "go_button" value="Display list" onClick="MM_jumpMenuGo('jumpMenu','parent',0)">
+    </form>
