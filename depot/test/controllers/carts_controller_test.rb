@@ -29,10 +29,6 @@ class CartsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, id: @cart
-    assert_response :success
-  end
 
   test "should update cart" do
     patch :update, id: @cart, cart: {  }
