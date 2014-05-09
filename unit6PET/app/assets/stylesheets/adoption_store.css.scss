@@ -1,0 +1,38 @@
+// Place all the styles related to the AdoptionStore controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.adoption_store{
+  h1{
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid lighten(#9999ff, 20%);
+  }
+  .entry{
+    overflow: auto;
+    margin-top: 10px;
+    border: 2px solid lighten(#F7FE2E, 5%);
+    min-height: 100px;
+    background-color: lighten(#F781F3, 23%);
+
+    img{
+      width: 100px;
+      height: 100px;
+      margin-bottom: 7px;
+      float: left;
+      margin-right: 10px;
+    }
+    h3{
+      font-size: large;
+      margin-left: 75px;
+      margin-bottom: 5px;
+    }
+    p, div.info {
+
+      margin-left: 50px;
+      margin-top: 2px;
+    }
+    .brage{
+      margin-right: 10px;
+    }
+  }
+}

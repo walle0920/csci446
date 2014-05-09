@@ -1,0 +1,29 @@
+<h1>Listing pets</h1>
+
+<table class="pets">
+  <tbody>
+    <% @pets.each do |pet| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td><%= image_tag(pet.picture, class: 'list_image') %></td>
+        <td class="basic_info">
+            <dl>
+                <dt> <%= pet.name %> </dt>
+                <dd> Breed: <%= pet.breed %>  Age: <%= pet.age %></dd>
+                <dd> Stayed here for:<%= pet.stay %></dd>
+            </dl>
+          <br>
+        <%= truncate(strip_tags(pet.tendencies), length: 160)%>
+        </td>
+        <td><%= truncate(strip_tags(pet.description), length:160) %></td>
+        <td class="list_actions">
+          <%= link_to 'Show', pet %> <br/>
+          <%= link_to 'Edit', edit_pet_path(pet) %><br/>
+          <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pet', new_pet_path %>

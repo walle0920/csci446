@@ -1,0 +1,30 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+betty:
+    name: betty
+    age: 8
+    breed: domestic shorthair
+    stay: 2
+    description: Betty is a loved cat that has stayed in the kettle for 2 whole years. She does not know how to clean herself
+    tendencies: drool all over, purr very loudly, smile
+    status: available
+
+one:
+  name: MyString
+  picture: MyString.jpg
+  breed: MyString
+  age: 9.99
+  stay: 9.99
+  description: MyText
+  tendencies: MyText
+  status: available
+
+two:
+  name: MyString
+  picture: MyString.jpg
+  breed: MyString
+  age: 9.99
+  stay: 9.99
+  description: MyText
+  tendencies: MyText
+  status: available

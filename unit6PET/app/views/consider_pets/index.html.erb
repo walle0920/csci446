@@ -1,0 +1,29 @@
+<h1>Listing consider_pets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pet</th>
+      <th>Consider cart</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consider_pets.each do |consider_pet| %>
+      <tr>
+        <td><%= consider_pet.pet %></td>
+        <td><%= consider_pet.consider_cart %></td>
+        <td><%= link_to 'Show', consider_pet %></td>
+        <td><%= link_to 'Edit', edit_consider_pet_path(consider_pet) %></td>
+        <td><%= link_to 'Destroy', consider_pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Consider pet', new_consider_pet_path %>

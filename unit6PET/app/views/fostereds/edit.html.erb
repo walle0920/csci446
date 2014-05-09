@@ -1,0 +1,25 @@
+<h1>Foster Animal Agreement</h1>
+
+<%the_pet = Pet.find(params[:pets_id])%>
+<div class="entry">
+  <%= image_tag(the_pet.picture) %>
+  <h3><%= the_pet.name %></h3>
+  <div class="info">
+    <span class="brage">Breed: <%= the_pet.breed %>   Age:<%= the_pet.age %></span>
+    Been here since: <%= the_pet.stay %>
+    <br>
+    <% session[:first]  =2 %>
+    <%= sanitize(the_pet.tendencies) %>
+  </div>
+  <%= sanitize(the_pet.description) %>
+</div>
+<div class="agreement">
+<p> This animal needs to have a safe home. The animal needs to not be abused.
+ <br> Do you agree to provide a good home for this animal? Do you agree not to abuse this poor animal?</p>
+</div>
+<table>
+<tr>
+  <td><%= button_to 'I agree', line_pets_path('pets_id' => the_pet), method: :post %> </td>
+  <td><%= button_to 'I Do not agree',  line_pets_path('first' => 3)%> </td>
+</tr>
+</table>

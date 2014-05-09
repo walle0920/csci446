@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pet Fostering</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class='<%= controller.controller_name %>'>
+<div id="banner">
+  <%= image_tag("logo.png") %>
+  <%= @page_title || "Give them some love!" %>
+</div>
+<div id="columns">
+  <div id="side">
+    <div id="cart">
+      <% if @con_cart %>
+      <%= hidden_div_if(@con_cart.consider_pets.empty?, id: 'cart') do %>
+        <%= render @con_cart %>
+      <% end %>
+      <% end %>
+    </div>
+
+    <ul>
+      <li><%=link_to "adopt a pet", adoption_store_index_path %> </li>
+      <li><%= link_to "edit", pets_path %></li>
+    </ul>
+  </div>
+  <div id="main">
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>

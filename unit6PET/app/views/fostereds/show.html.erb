@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Currently fostered pets</h3>
+<div class="fostPets">
+<% Fostered.find(session[:fostered_id]).line_pets.each do |item| %>
+    <li><%= item.pet.name %></li>
+    <% end %>
+</div>
+<%= link_to 'Back', fostereds_path %>

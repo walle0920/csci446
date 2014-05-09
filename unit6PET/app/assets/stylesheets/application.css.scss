@@ -1,0 +1,143 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+$theme-color : #01DF3A;
+
+#banner {
+  background-color: $theme-color;
+  color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+  padding: 15px;
+  border-bottom: 3px solid;
+  height: 65px;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  font-size: xx-large;
+  text-align: left;
+  img{
+    float:left;
+    width: 65px;
+    height: 65px;
+  }
+
+}
+
+#notice {
+  color: #000 !important;
+ border: 2px solid red;
+ padding: 1em;
+ margin-bottom: 2em;
+ background-color: #f0f0f0;
+ font: bold smaller sans-serif;
+}
+#columns {
+  background-color: lighten($theme-color, 25%);
+
+  #main {
+    background-color: lighten($theme-color, 50%);
+    padding: 7px;
+    margin-left: 15px;
+  }
+  #side {
+    background-color: lighten($theme-color, 25%);
+    padding: 5px 5px;
+    float:left;
+    width: 10%;
+    height: 600px;
+    form, div {
+      display: inline;
+    }
+    input {
+      font-size: small;
+    }
+    #cart {
+      font-size: smaller;
+      color: white;
+      table{
+          background-color: darken(#81F7D8, 10%);
+        border-top: 1px dotted #595;
+        border-bottom: 1px dotted #595;
+       
+      }
+    }
+  ul{
+    padding: 0;
+    li{
+      list-style: none;
+
+    a {
+     font-size: small;
+    }
+    }
+  }
+  }
+}
+
+input[type="submit"] {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  display: block;
+  clear: left;
+  text-align: center;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+
+
+.foster_parent_form{
+  fieldset{
+    background:  #5599ff;
+    legend{
+      color: lighten(#dfd, 5%);
+      background: lighten(#7a7, 5%);
+      font-family: sans-serif;
+      padding: 15px 75px;
+    }
+  }
+  form{
+    padding-top: 20px;
+    label{
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: .2em;
+      margin-right: .1em;
+      display: block;
+    }
+    select, textarea, input{
+      margin-left: .5em;
+    }
+    .submit{
+      margin-left: .5em;
+    }
+    br{
+      display: none;
+    }
+  }
+}

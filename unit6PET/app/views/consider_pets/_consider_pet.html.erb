@@ -1,0 +1,8 @@
+<% if consider_pet == @current_pet %>
+    <tr id="current_pet">
+<% else %>
+    <tr>
+<% end %>
+  <td> <%= consider_pet.pet.name %>
+  <%= image_tag(consider_pet.pet.picture, size: "50x50")%></td>
+</tr>

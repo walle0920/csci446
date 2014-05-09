@@ -1,0 +1,10 @@
+<%unless consider_cart.consider_pets.empty? %>
+<h2>Your Considerations</h2>
+<table>
+      <%= render(consider_cart.consider_pets) %>
+</table>
+<%= link_to 'give up', consider_cart, method: :delete, data: {confirm: 'Are you sure?'} %>
+
+
+<%= link_to 'HOME', adoption_store_index_path %>
+<% end %>

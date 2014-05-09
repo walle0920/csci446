@@ -1,0 +1,8 @@
+<%# if the cart just has 1 pet, unhide it. %>
+if ($('#cart tr').length ==1) {$("#cart").show('blind', 1000);}
+
+<%# in the cart section, display everything in the @con_cart %>
+$('#cart').html("<%= escape_javascript render(@con_cart) %>");
+
+<%# animate the currenlty selected pet %>
+$('#current_pet').css({'background-color': '#9FF781'}).animate({'background-color': '#81F79F'}, 1000);

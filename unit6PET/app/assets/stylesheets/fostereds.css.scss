@@ -1,0 +1,62 @@
+// Place all the styles related to the Fostereds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.fostereds{
+  h1{
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid lighten(#9999ff, 20%);
+  }
+  .entry{
+    overflow: auto;
+    margin-top: 10px;
+    border: 2px solid lighten(#F7FE2E, 5%);
+    min-height: 100px;
+    background-color: lighten(#F781F3, 23%);
+
+    img{
+      width: 100px;
+      height: 100px;
+      margin-bottom: 7px;
+      float: left;
+      margin-right: 10px;
+    }
+    h3{
+      font-size: large;
+      margin-left: 75px;
+      margin-bottom: 5px;
+    }
+    div.info {
+      margin-left: 50px;
+      margin-top: 2px;
+    }
+    .agreement{
+      margin: 5px;
+      padding: 10px;
+      p{
+        font-size: 20dp;
+      }
+    }
+
+    .brage{
+      margin-right: 10px;
+    }
+  }
+
+  table{
+    td{
+      margin-left: 15px;
+      margin-right: 15px;
+      padding: 10px;
+    }
+  }
+}
+
+.fostPets{
+  margin-left: 10px;
+  li{
+    font-size: large;
+    padding: 5px;
+    margin-top: 5px;
+  }
+}

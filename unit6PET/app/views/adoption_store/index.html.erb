@@ -1,0 +1,22 @@
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+<h1>Home of pet </h1>
+
+<% @pets.each do |pet| %>
+<div class="entry">
+  <%= image_tag(pet.picture) %>
+  <h3><%= pet.name %></h3>
+  <div class="info">
+    <span class="brage">Breed: <%= pet.breed %>   Age:<%= pet.age %></span>
+    <br>
+    <% session[:first] = 1 %>
+
+    <%= sanitize(pet.tendencies) %>  
+    <%= link_to 'Foster', edit_fostered_path(id: 1, pets_id: pet), class: :fake_button %>
+    <%= link_to 'Consider', consider_pets_path(pets_id: pet), remote: true , name: "Consider", method:  :post, class: :fake_button %>
+  </div>
+  <%= sanitize(pet.description) %>
+</div>
+<% end %>
+

@@ -1,0 +1,47 @@
+<div class="form_pets">
+<%= form_for(@pet) do |f| %>
+  <% if @pet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+      <% @pet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="basic">
+  <table>
+    <tr>
+    <td><%= f.label :name %><br></td>
+      <td><%= f.label :breed %><br></td>
+      <td><%= f.label :age %><br></td>
+      <td> How long has pet been here:<br></td>
+      <td><%= f.label :picture %><br></td>
+      </tr>
+    <tr>
+    <td><%= f.text_field :name %></td>
+    <td><%= f.text_field :breed %></td>
+    <td> <%= f.text_field :age %></td>
+    <td><%= f.text_field :stay %></td>
+    <td> <%= f.text_field :picture %></td>
+    </tr>
+  </table>
+  </div>
+      <table>
+        <tr>
+    <td><%= f.label :description %><br></td>
+   <td> <%= f.label :tendencies %><br> </td>
+          </tr>
+        <tr>
+         <td> <%= f.text_area :description, rows: 10, cols:50 %></td>
+
+    <td><%= f.text_area :tendencies, rows: 8, cols:50 %></td>
+     </tr>
+   </table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
