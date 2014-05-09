@@ -21,9 +21,7 @@ class FosteredsController < ApplicationController
 
   # GET /fostereds/1/edit
   def edit
-    if !user_signed_in? and !admin_signed_in?
-      redirect_to :back, notice: "You must be signed in to foster a pet"
-    end
+    
   end
 
   # POST /fostereds
